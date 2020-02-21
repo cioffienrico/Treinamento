@@ -2,6 +2,8 @@ package exec7;
 
 import javax.swing.JOptionPane;
 
+import exec7.Carro;
+
 public class Locadora {
 
 	String todos = "0";
@@ -14,7 +16,7 @@ public class Locadora {
 
 	public static void main(String[] args) {
 
-		carro[0] = new Carro("ONIX", "ABC 1234", 150, "ALCOOL", 10000, "A");
+		carro[0] = new Carro("ONIX", "ABC 1234", 150, "ALCOOL", 10000, "VERMELHO");
 		carro[1] = new Carro("FORD KA", "ABD 1235", 180, "GASOLINA", 15000, "PRETO");
 		carro[2] = new Carro("PRISMA", "ABE 1236", 190, "FLEX", 20000, "BRANCO");
 		carro[3] = new Carro("RENEGADE", "ABF 1237", 170, "ALCOOL", 25000, "PRETO");
@@ -23,7 +25,7 @@ public class Locadora {
 		carro[6] = new Carro("CIVIC", "ABI 1240", 160, "ALCOOL", 40000, "PRETO");
 		carro[7] = new Carro("RANGER", "ABJ 1241", 170, "GASOLINA", 42000, "CINZA");
 		carro[8] = new Carro("FIORINO", "ABK 1242", 180, "FLEX", 38000, "PRETO");
-		carro[9] = new Carro("ONIX", "ABL 1243", 190, "ALCOOL", 37000, "A");
+		carro[9] = new Carro("ONIX", "ABL 1243", 190, "ALCOOL", 37000, "VERMELHO");
 
 		Locadora locadora = new Locadora();
 		locadora.escOpcao();
@@ -77,15 +79,12 @@ public class Locadora {
 
 	public void pesComb(String combustivel) {
 		boolean encontrou = false;
-		for (int I = 0; I < carro.length; I++) {
-			if (carro[I].combustivel.equals(combustivel)) {
-				System.out.println(carro[I].modelo);
-				System.out.println(carro[I].placa);
-				System.out.println(carro[I].veloMax);
-				System.out.println(carro[I].combustivel);
-				System.out.println(carro[I].valor);
-				System.out.println(carro[I].cor);
-				System.out.println("\n");
+		for (int i = 0; i < carro.length; i++) {
+			if (carro[i].combustivel.equals(combustivel)) {
+				message = "\nmodelo: " + carro[i].modelo + "\n placa: " + carro[i].placa + "\n velocidade maxima: "
+						+ carro[i].veloMax + "\n tipo de combustivel: " + carro[i].combustivel + "\n valor do carro: "
+						+ carro[i].valor + "\n cor do carro: " + carro[i].cor + "\n";
+				JOptionPane.showMessageDialog(null, message);
 				encontrou = true;
 			}
 		}
@@ -96,15 +95,12 @@ public class Locadora {
 
 	public void pesMod(String modelo) {
 		boolean encontrou = false;
-		for (int I = 0; I < carro.length; I++) {
-			if (carro[I].modelo.equals(modelo)) {
-				System.out.println(carro[I].modelo);
-				System.out.println(carro[I].placa);
-				System.out.println(carro[I].veloMax);
-				System.out.println(carro[I].combustivel);
-				System.out.println(carro[I].valor);
-				System.out.println(carro[I].cor);
-				System.out.println("\n");
+		for (int i = 0; i < carro.length; i++) {
+			if (carro[i].modelo.equals(modelo)) {
+				message = "\nmodelo: " + carro[i].modelo + "\n placa: " + carro[i].placa + "\n velocidade maxima: "
+						+ carro[i].veloMax + "\n tipo de combustivel: " + carro[i].combustivel + "\n valor do carro: "
+						+ carro[i].valor + "\n cor do carro: " + carro[i].cor + "\n";
+				JOptionPane.showMessageDialog(null, message);
 				encontrou = true;
 
 			}
@@ -116,15 +112,12 @@ public class Locadora {
 
 	public void pesVelo(int veloMax) {
 		boolean encontrou = false;
-		for (int I = 0; I < carro.length; I++) {
-			if (carro[I].veloMax == veloMax) {
-				System.out.println(carro[I].modelo);
-				System.out.println(carro[I].placa);
-				System.out.println(carro[I].veloMax);
-				System.out.println(carro[I].combustivel);
-				System.out.println(carro[I].valor);
-				System.out.println(carro[I].cor);
-				System.out.println("\n");
+		for (int i = 0; i < carro.length; i++) {
+			if (carro[i].veloMax == veloMax) {
+				message = "\nmodelo: " + carro[i].modelo + "\n placa: " + carro[i].placa + "\n velocidade maxima: "
+						+ carro[i].veloMax + "\n tipo de combustivel: " + carro[i].combustivel + "\n valor do carro: "
+						+ carro[i].valor + "\n cor do carro: " + carro[i].cor + "\n";
+				JOptionPane.showMessageDialog(null, message);
 				encontrou = true;
 			}
 		}
@@ -136,15 +129,12 @@ public class Locadora {
 
 	public void pesCor(String cor) {
 		boolean encontrou = false;
-		for (int I = 0; I < carro.length; I++) {
-			if (carro[I].cor.equals(cor)) {
-				System.out.println(carro[I].modelo);
-				System.out.println(carro[I].placa);
-				System.out.println(carro[I].veloMax);
-				System.out.println(carro[I].combustivel);
-				System.out.println(carro[I].valor);
-				System.out.println(carro[I].cor);
-				System.out.println("\n");
+		for (int i = 0; i < carro.length; i++) {
+			if (carro[i].cor.equals(cor)) {
+				message = "\nmodelo: " + carro[i].modelo + "\n placa: " + carro[i].placa + "\n velocidade maxima: "
+						+ carro[i].veloMax + "\n tipo de combustivel: " + carro[i].combustivel + "\n valor do carro: "
+						+ carro[i].valor + "\n cor do carro: " + carro[i].cor + "\n";
+				JOptionPane.showMessageDialog(null, message);
 				encontrou = true;
 			}
 		}
@@ -155,13 +145,13 @@ public class Locadora {
 	}
 
 	public void buscarTodos() {
-		for (int I = 1; I < carro.length; I++) {
+		for (int i = 1; i < carro.length; i++) {
 
-			for (int j = 0; j < I; j++) {
-				if (carro[I].valor > carro[j].valor) {
+			for (int j = 0; j < i; j++) {
+				if (carro[i].valor > carro[j].valor) {
 					Carro temp = new Carro();
-					temp = carro[I];
-					carro[I] = carro[j];
+					temp = carro[i];
+					carro[i] = carro[j];
 					carro[j] = temp;
 				}
 			}
@@ -176,55 +166,64 @@ public class Locadora {
 		}
 	}
 
-	public void compra(String cor, String modelo) {
-		boolean encontrou = false;
-		String message = "";
+	public void ordenarCarros() { 
+				for (int i = 0; i < carro.length - 1 && carro[i] != null; i++) { 
+		 			for (int j = i + 1; j < carro.length; j++) { 
+		 				if (carro[i].valor < carro[j].valor) { 
+		 					Carro aux = carro[i]; 
+		 					carro[i] = carro[j]; 
+		 					carro[j] = aux; 
+					} 
+		 			} 
+		 		} 
+		 	} 
+		 
+		 		public void compra(String cor, String modelo) {
+		 			boolean encontrou = false;
+		 			String message = "";
 
-		int j = 0;
-		for (int i = 0; i < carro.length; i++) {
-			if (carro[i].cor.equals(cor) && carro[i].modelo.equals(modelo)) {
+		 			int j = 0;
+		 			for (int i = 0; i < carro.length; i++) {
+		 				if (carro[i].cor.equals(cor) && carro[i].modelo.equals(modelo)) {
 
-				message = message + j + "\nmodelo: " + carro[i].modelo + "\n placa: " + carro[i].placa + "\n velocidade maxima: "
-						+ carro[i].veloMax + "\n tipo de combustivel: " + carro[i].combustivel + "\n valor do carro: "
-						+ carro[i].valor + "\n cor do carro: " + carro[i].cor + "\n";
-				auxiliar[j] = carro[i];
-				j++;
-				encontrou = true;
-			}
-			
-		}
-		
-		if (!encontrou) {
-			System.out.println("Não foi encontrado");
-		}else { 
-			String opcao = JOptionPane.showInputDialog(message);
-			int num = Integer.parseInt(opcao);
-			double valorPago = Double.parseDouble(JOptionPane.showInputDialog("insira o quanto irá pagar: "));
-			double troco = (valorPago - auxiliar[num].valor);
-			
-			
-			
-			if (valorPago > auxiliar[num].valor) {
-				JOptionPane.showMessageDialog(null, "O carro foi comprado com sucesso e o troco é: " + troco);
-			} else {
-				if (valorPago == auxiliar[num].valor) {
-					JOptionPane.showMessageDialog(null, "O carro foi comprado com sucesso");
-				} else {
-					JOptionPane.showMessageDialog(null, "voce nao possui dinheiro suficiente para comprar esse carro");
-				}
-			}	
-			
-			
-		}
-		
+		 					message = message + j + "\nmodelo: " + carro[i].modelo + "\n placa: " + carro[i].placa + "\n velocidade maxima: "
+		 							+ carro[i].veloMax + "\n tipo de combustivel: " + carro[i].combustivel + "\n valor do carro: "
+		 							+ carro[i].valor + "\n cor do carro: " + carro[i].cor + "\n";
+		 					auxiliar[j] = carro[i];
+		 					j++;
+		 					encontrou = true;
+		 				}
+		 				
+		 			}
+		 			
+		 			if (!encontrou) {
+		 				System.out.println("Não foi encontrado");
+		 			}else { 
+		 				String opcao = JOptionPane.showInputDialog(message);
+		 				int num = Integer.parseInt(opcao);
+		 				double valorPago = Double.parseDouble(JOptionPane.showInputDialog("insira o quanto irá pagar: "));
+		 				double troco = (valorPago - auxiliar[num].valor);
+		 				
+		 				
+		 				
+		 				if (valorPago > auxiliar[num].valor) {
+		 					JOptionPane.showMessageDialog(null, "O carro foi comprado com sucesso e o troco é: " + troco);
+		 				} else {
+		 					if (valorPago == auxiliar[num].valor) {
+		 						JOptionPane.showMessageDialog(null, "O carro foi comprado com sucesso");
+		 					} else {
+		 						JOptionPane.showMessageDialog(null, "voce nao possui dinheiro suficiente para comprar esse carro");
+		 					}
+		 				}	
+		 				
+		 				
+		 			}
+		 			
+		 		
+		 	}
 
-		
-		
-		
-
-		
-
-		
-
-	}
-}
+		 	
+		 		
+		 		
+		 		
+		 		}

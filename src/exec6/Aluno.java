@@ -1,11 +1,6 @@
 package exec6;
 
 import java.time.Year;
-import java.util.Calendar;
-import java.util.Date;
-
-import org.joda.time.DateTime;
-import org.joda.time.Days;
 
 public class Aluno  {
 		
